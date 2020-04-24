@@ -12,7 +12,7 @@ def take_picture(color,gray):
     cv2.imwrite("gray_output.jpg", gray)
     cv2.imwrite("rgb_output.jpg", color)
     cv2.imshow("captured image",color)
-    cv2.waitKey(50)
+    cv2.waitKey(0)
 
 
 video = cv2.VideoCapture(0,cv2.CAP_DSHOW)
