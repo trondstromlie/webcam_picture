@@ -8,13 +8,14 @@ import cv2
 
 images = 0
 #function to  capture a picture
-#stores two jpg files, grayscale and color in folder
+#stores two jpg files, grayscale and color, in folder
 def take_picture(color,gray):
     global images
     cv2.imwrite("gray_output{}.jpg".format(images), gray)
     cv2.imwrite("color_output{}.jpg".format(images), color)
     cv2.imshow("captured image",color)
-    cv2.waitKey(100)
+    cv2.waitKey(500) == 5
+    cv2.destroyWindow("captured image")
     images += 1
 
 #start the camera OBJECT
@@ -41,7 +42,7 @@ while True:
     #if spacebar is pressed take picture with take_picture function
     if key == 32: #32 == spacebar
         take_picture(frame,gray)
-        print("capturing photos")
+        print("capturing photos {}".format(images))
 
 
 
