@@ -1,7 +1,7 @@
 """
     A simple python program to display the webcam.
     Press q to exit press space to take a picture.
-    Author Trond Strøm Lie
+    Author Trond Strøm Lie.
 """
 
 import cv2
